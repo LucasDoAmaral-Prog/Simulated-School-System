@@ -3,7 +3,7 @@
 ## 📖 Sobre o Projeto | About the Project
 
 ### **Português**
-Bem-vindo ao **Sistema Escolar Simulado**! Este site foi desenvolvido para simular um ambiente escolar, permitindo que professores e estudantes interajam de forma eficiente.  
+Este site foi desenvolvido para simular um ambiente escolar, permitindo que professores e estudantes interajam de forma eficiente.  
 O sistema conta com as seguintes funcionalidades:
 
 - **Login de Professores e Estudantes:**  
@@ -24,7 +24,7 @@ O sistema conta com as seguintes funcionalidades:
 ---
 
 ### **English**
-Welcome to the **Simulated School System**! This website was designed to simulate a school environment, providing tools for efficient interaction between teachers and students.  
+This website was designed to simulate a school environment, providing tools for efficient interaction between teachers and students.  
 The system offers the following features:
 
 - **Teacher and Student Login:**  
