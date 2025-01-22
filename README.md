@@ -3,11 +3,15 @@
 ## 📖 Sobre o Projeto | About the Project
 
 ### **Português**
-Este site foi desenvolvido para simular um ambiente escolar, permitindo que professores e estudantes interajam de forma eficiente.  
+Bem-vindo ao **Sistema Escolar Simulado**! Este site foi desenvolvido com o objetivo de **treinar habilidades com banco de dados** e simular um ambiente escolar, permitindo que professores e estudantes interajam de forma eficiente.  
 O sistema conta com as seguintes funcionalidades:
 
 - **Login de Professores e Estudantes:**  
-  Professores são registrados exclusivamente pelo sistema, enquanto estudantes podem criar suas contas a qualquer momento.
+  Professores são registrados exclusivamente pelo sistema, enquanto estudantes podem criar suas contas a qualquer momento.  
+  **Logins de exemplo para professores:**
+  - `vandamaria@unicamp.br`
+  - `josepedro@unicamp.br`  
+  *(Para criar novos logins de professor, consulte os comentários no código com orientações específicas.)*
 
 - **Recursos para Professores:**  
   Professores têm a capacidade de:
@@ -24,11 +28,15 @@ O sistema conta com as seguintes funcionalidades:
 ---
 
 ### **English**
-This website was designed to simulate a school environment, providing tools for efficient interaction between teachers and students.  
+Welcome to the **Simulated School System**! This website was designed with the **goal of improving database management skills**, providing tools to simulate a school environment and efficient interaction between teachers and students.  
 The system offers the following features:
 
 - **Teacher and Student Login:**  
-  Teachers are registered exclusively by the system, while students can create their accounts at any time.
+  Teachers are registered exclusively by the system, while students can create their accounts at any time.  
+  **Example logins for teachers:**
+  - `vandamaria@unicamp.br`
+  - `josepedro@unicamp.br`  
+  *(To create new teacher logins, check the comments in the code for specific instructions.)*
 
 - **Teacher Tools:**  
   Teachers can:
