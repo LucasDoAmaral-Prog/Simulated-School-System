@@ -1,0 +1,621 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+
+}
+
+body{
+
+    background-color: #e3e9ff;
+
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+@keyframes imgAnimation {
+    
+    from{margin-right: 1400px;}
+    to{margin-left: 0px;}
+
+}
+
+@keyframes loginAnimation {
+    
+    from{margin-left: -1400px;}
+    to{margin-left: 0px;}
+
+}
+
+
+@keyframes registerAnimation{
+
+    from{margin-bottom: 250%}
+    to{margin-left: 0px;}
+
+}
+
+@keyframes imageAnimation{
+
+    from{margin-top: 250%}
+    to{margin-bottom: 0px;}
+
+}
+
+@keyframes progressAnimation{
+
+    to{transform: rotate(360deg) ;}
+
+}
+
+@keyframes pointerAnimation{
+
+    0%, 100%{opacity: 1;}
+    50%{opacity: 0;}
+
+}
+
+@keyframes paragraphShow {
+    
+    from{ margin-left: -90px; opacity: 0;}
+    to{margin-left: 0px; opacity: 1;}
+
+}
+
+@keyframes btnShow {
+    
+    from{ margin-right: -90px; opacity: 0;}
+    to{margin-right: 0px; opacity: 1;}
+
+}
+
+.fatherImages, .painelRegisterStudents{
+
+    display: flex;
+    height: 98vh;
+    
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.painelRegisterStudents{
+
+    display: none !important;
+    justify-content: center !important;
+
+}
+
+.imageStudents{
+
+    width: 48vw;
+    height: auto;
+
+}
+
+.registerUsually, .registerStudents{
+
+    background: linear-gradient(100deg, rgb(121, 189, 235), #a9b2d3);
+    padding-top: 40px; padding-bottom: 40px;
+    padding-left: 50px; padding-right: 50px;
+    border-radius: 10px;
+    
+    height: auto;
+
+}
+
+.registerUsually{
+
+    animation-name: loginAnimation;
+    animation-duration: 1.6s;
+
+}
+
+.titleBoletim{
+
+    position: relative;
+    font-weight: 600;
+    font-size: 30px;
+
+}
+
+.underline::before{
+
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    bottom: 5px;
+    background: linear-gradient(80deg, rgb(83, 154, 247), #496ef7);
+
+}
+
+.altered::before{
+
+    bottom:7px;
+    width: 27px;
+
+}
+
+.inputField{
+
+    position: relative;
+
+}
+
+
+input[type='email'], .password, .RegisterPassword, .RegisterName{
+
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 4px;
+    border-top: 0;border-left: 0;border-right: 0;
+    border-style: solid;
+    margin-top: 30px;
+    padding: 8px;
+    width: 290px;
+    border-color: rgba(43, 44, 44, 0.363);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+.image{
+
+    position: absolute;
+
+}
+
+.fatherButton{
+
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+}
+
+.buttonBack{
+
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    
+}
+
+.buttonBack:hover{
+
+    transform: translateX(10%);
+    filter: invert(55%);
+
+}
+
+.image{
+
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+
+    transition: all .4s ease-in-out;
+}
+
+.passwordImage{
+
+    height: 25px;
+
+}
+
+.passwordImage:hover{
+
+    filter: invert(30%);
+
+}
+
+.designStyle::before{
+
+    position: absolute;
+    content: '';
+    width: 306px;
+    bottom: 0.5px;    
+    left: 0;
+    height: 2px;
+
+}
+
+.designStyle::after{
+
+    position: absolute;
+    content: '';
+    width: 290px;
+    bottom: 0.1px;    
+    left: 0;
+    height: 4px;
+    background-color: white;
+    background: linear-gradient(80deg, rgb(62, 140, 243), rgb(54, 88, 240));
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+
+}
+
+
+input[type='email']:focus ~ .designStyle::after, input[type='password']:focus ~ .designStyle::after, input[type='text']:focus ~ .designStyle::after{
+
+    transform: scaleX(1);
+
+}
+
+input[type='email']:hover ~ .designStyle::after, input[type='password']:hover ~ .designStyle::after,  input[type='text']:hover ~ .designStyle::after{
+
+    transform: scaleX(1);
+
+}
+
+::placeholder{
+
+    color: rgb(0, 0, 0)
+
+}
+
+.advice-Error{
+
+    font-size: calc(90% + 0.1vmin);
+    color: rgb(204, 45, 45);
+    max-width: 270px;
+
+}
+
+input[type="button"]{
+
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+
+    border: none;
+    margin-top: 30px;
+    height: 40px;
+
+    background: linear-gradient(80deg, rgb(83, 154, 247), #496ef7);
+
+    font-size: 20px;
+    color: white;
+    transition: all .4s ease;
+
+}
+
+input[type="button"]:hover{
+
+    transform: scale(1.1);
+    letter-spacing: 2px;
+    background: linear-gradient(80deg, #496ef7, rgb(83, 154, 247));
+
+}
+
+.register{
+
+    background: linear-gradient(80deg, rgb(83, 154, 247), #496ef7);
+    margin-top: 10px !important;
+    height: 60px !important;
+
+}
+
+.studentNew{
+
+    margin-top: 20px;
+
+}
+
+.studentMain{
+
+    cursor: pointer;
+    background-image: linear-gradient(80deg, rgb(1, 39, 255), rgb(57, 138, 252), #2f49a8);
+  
+    background-clip: text;
+    -webkit-background-clip: text; 
+
+    -webkit-text-fill-color: transparent;
+  
+    color: black;
+    
+    transition: all .3s ease;
+
+}
+
+.studentMain:hover{
+
+    letter-spacing: 2px;
+
+}
+
+
+.painelRegisterStudents{
+
+    position: relative;
+    background-image: url(../assets/images/5514.svg);
+    width: auto;
+    height: 98vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.paragraphSelect{
+
+    font-size: 18px;
+    margin-top: 30px;
+
+} 
+
+select[name="select"]{
+
+    cursor: pointer;
+    color: rgb(248, 248, 248);
+    outline: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    border: 0 !important;
+    box-shadow: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    padding: 10px;
+    
+    background-color: rgb(46, 134, 248);
+    background-image: url("../assets/images/arrow.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px);
+
+}
+
+.buttonCadastrar{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttonRegister{
+
+    border-style: solid;
+    margin-top: 20px;
+    width: 70%;
+    border-radius: 10px;
+    padding: 18px;
+
+    background: linear-gradient(80deg, #496ef7, rgb(83, 154, 247));
+
+}
+
+.usuallySigned{
+
+    top: 0;
+
+    position: absolute;    
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(3, 3, 3, 0.61);
+
+    display: none; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.background-Certification{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #dcdcdcfb;
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 90px;
+    padding-top: 90px;
+}
+
+.imageVerify{
+
+    height: 200px;
+
+}
+
+.title{
+    
+    margin-top: 30px;
+    font-size: calc(100% + 1.2vmin);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    color: black;
+
+    background-image: linear-gradient(80deg, rgb(1, 39, 255), rgb(57, 138, 252), #2f49a8)
+}
+
+.paragraph{
+
+    margin-top: 10px;
+    animation-name: paragraphShow;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+
+}
+
+.backMenu{
+
+    width: 350px !important;
+    animation-name: btnShow;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both; 
+
+}
+
+.title::after{
+
+    content: '|';
+    opacity: 1;
+    animation-name: pointerAnimation;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+
+
+    font-size: 25px;
+    background-color: gray;
+
+    letter-spacing: -3px;
+}
+
+.progress{
+
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 100%;
+    border-width: 7px;
+
+    border-style: solid;
+    border-color: rgb(223, 221, 221);
+    
+    border-left-color: rgb(33, 106, 207);
+
+    animation-name: progressAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.7s;
+
+}
+
+.progressAdvice{
+
+    background-color: rgba(143, 143, 143, 0.377);
+    display: none !important;
+
+}
+
+@media screen and (max-width: 914px){
+
+    .fatherImages{
+
+        flex-direction: column;
+
+    }
+
+    .imageStudents{
+
+        width: 450px ;
+        height: 400px;
+        animation-name: imageAnimation;
+        animation-duration: 2s;
+    }
+
+}
+
+@media screen and (max-width: 463px){
+
+    .imageStudents{
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    .registerUsually, .registerStudents{
+
+        width: 95%;
+
+    }
+
+    input[type="email"], input[type="password"], input[type="text"],input[type='button'], select[name="select"]{
+
+        width: 91.9%;
+
+    }
+
+
+    .designStyle::after, .designStyle::before{
+
+        width: 91.9%;
+
+    }
+
+
+    .image{
+
+        right: 23px;
+        
+    }
+
+    .advice-Error{
+
+        font-size: calc(60% + 0.6vmin);
+
+    }
+
+}
+
+@media screen and (max-width: 508px){
+
+    .painelRegisterStudents{
+
+        align-items: center;
+        height: 100vh;
+        background-image: url();
+
+    }
+
+    .registerStudents{
+
+        padding: 40px;
+
+    }
+
+
+}
+
+@media screen and (max-height:736px){
+
+    .fatherImages{
+
+        height: auto;
+
+    }
+
+    .fatherButton{
+
+        top: 5px;
+        left: 5px
+
+    }
+
+    .registerStudents{
+
+        padding: 30px;
+        
+
+    }
+
+}
+
+@media screen and (max-height: 598px){
+
+    .painelRegisterStudents{
+
+        height: auto;
+        align-items: flex-start;
+
+    }
+
+}
