@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styleStudentAndTeacher.css">
+    <link rel="stylesheet" href="../styles/styleTeacher.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap"/>
+    <title>Teacher Portal</title>
+    <style>
+    :root{
+
+        --light-Mode: #25262a;
+        --input-Mode: #303135;
+        --light-Mode-Header: rgba(218, 214, 214, 0.1);
+        --items-Color: rgba(14, 13, 13, 0.445);
+        --font-Color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <p class="studentsPortal">Teacher Portal</p>
+            <div class="darkMode">
+                <div class="Sun"></div>
+                <div class="Moon"></div>          
+            </div>
+            <div class="studentImage">
+                <img class="imageTs" src="../assets/images/teacher.png" >
+            </div>
+        </header>
+        <section class="imageStudent">
+            <div class="imageSource">
+                <div class="imageProperty">
+                    <img class="studentIdentification" alt="Você" src="../assets/images/teacher.png">
+                    <div class="configStudent">
+                        <img class="imageConfig" src="../assets/images/configuracoes.png">      
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="welcomeUsually">
+            <div class="paragraphWelcome">
+                <h1 class="welcomeParagraph">Hello, <span class="name"></span>!</h1>
+            </div>
+        </section>
+        <section class="buttons">
+            <div class="buttonsManager">
+                <div class="buttonGrade designButton">
+                    <div class="imageBtn">
+                        <img src="../assets/images/exam.png">
+                    </div>
+                </div>
+                <div class="paragraphButtons">
+                    <p class="paragraphGradeTeacher">Grades</p>
+                </div>
+            </div>
+            <div class="buttonsManager">
+                <div class="buttonGrade designButton">
+                    <div class="imageBtn">
+                        <img class="exclusive"src="../assets/images/provas.png">
+                    </div>
+                </div>
+                <div class="paragraphButtons">
+                    <p class="paragraphAbsences">Absences</p>
+                </div>
+            </div>
+            <div class="buttonsManager">
+                <div class="buttonGrade designButton">
+                    <div class="imageBtn">
+                        <img class="ocurrences"src="../assets/images/ocorrencias.png">
+                    </div>
+                </div>
+                <div class="paragraphButtons">
+                    <p class="paragraphGradeTeacher">Occurrences</p>
+                </div>
+            </div>
+            <div class="buttonsManager">
+                <div class="buttonGrade designButton">
+                    <div class="imageBtn">
+                        <img src="../assets/images/pasta.png">
+                    </div>
+                </div>
+                <div class="paragraphButtons">
+                    <p class="paragraphMaterial">Activities</p>
+                </div>
+            </div>
+        </section>
+        <section class="teacherGrade">
+            <div class="backgroundSearchTeacher">
+                <div class="teacherParagraphTeacher">
+                    <img class="backArrowTeacher" src="../assets/images/seta.png">
+                    <h1 class="teacherTitleGrade">
+                        Teacher Portal
+                    </h1>
+                    <h3 class="subTitleGrade">   
+                        Enter the student's email
+                    </h3>
+                </div>
+                <div class="input-container">
+                    <input style="color: var(--font-Color)"type="text" class="username" required />
+                    <label class="enterEmail" for="Email">E-mail</label>
+                    <small style="color: red" class="advice-ErrorTeacher"></small>
+                </div>
+                <button id="submitGrade" class="Submit">Submit</button>
+            </div>
+            <div class="progress"></div>
+            <div class="backgroundVerify">
+                <h1 class="teacherTitleGrade"> 
+                    Is this your desired student?
+                </h1>
+                <div class="infoStudents">
+                    <p class="nameStudent">Name:</p>
+                    <p class="emailStudent">E-mail:</p>
+                    <p class="yearStudent">Year:</p>
+                    <p class="registerStudent">RA:</p>
+                </div>
+                <button class="Correct">Yes</button>
+                <button class="Correct No">No</button>
+            </div>
+        </section>
+        <section class="teacherGrade">
+            <div class="backgroundGradeTeacher_2">
+                <div class="teacherParagraphTeacher">
+                    <img class="backArrowTeacherGrade" src="../assets/images/seta.png">
+                    <h1 class="teacherTitleGrade"> 
+                        Desired student grade
+                    </h1>
+                </div>
+                <br>
+                <table class="gradesDeveloped">
+                    <thead> 
+                        <tr>
+                            <th>Subjects</th>
+                            <th>1° Bimonthly</th>
+                            <th>2° Bimonthly</th>
+                            <th>3° Bimonthly</th>
+                            <th>4° Bimonthly</th>
+                            <th>Average</th>
+                            <th>Situation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Math</td>
+                            <td>
+                                <input type="number" class="Math note">
+                            </td>
+                            <td>
+                                <input type="number" class="Math note">
+                            </td>
+                            <td>
+                                <input type="number" class="Math note">
+                            </td>
+                            <td>
+                                <input type="number" class="Math note">
+                            </td>
+                            <td  class="Math Average">
+                                0.0
+                            </td>
+                            <td class="Math result"></td>
+
+                        </tr>
+                        <tr>
+                            <td>English</td>
+                            <td>
+                                <input type="number" class="Eng note">
+                            </td>
+                            <td>
+                                <input type="number" class="Eng note">
+                            </td>
+                            <td>
+                                <input type="number" class="Eng note">
+                            </td>
+                            <td>
+                                <input type="number" class="Eng note">
+                            </td>
+                            <td class="Eng Average">
+                                0.0
+                            </td>
+                            <td class="Eng result"></td>
+
+                        </tr>
+                        <tr>
+                            <td>Geography</td>
+                            <td>
+                                <input type="number" class="Geo note">
+                            </td>
+                            <td>
+                                <input type="number" class="Geo note">
+                            </td>
+                            <td>
+                                <input type="number" class="Geo note">
+                            </td>
+                            <td>
+                                <input type="number" class="Geo note">
+                            </td>
+                            <td class="Geo Average">
+                               0.0
+                            </td>
+                            <td class="Geo result"></td>
+                        </tr>
+                        <tr>
+                            <td >History</td>
+                            <td>
+                                <input type="number" class="His note">
+                            </td>
+                            <td>
+                                <input type="number" class="His note">
+                            </td>
+                            <td>
+                                <input type="number" class="His note">
+                            </td>
+                            <td>
+                                <input type="number" class="His note">
+                    
+                            </td>
+                            <td class="His Average">
+                                0.0
+                            </td>
+                            <td class="His result"></td>
+
+                        </tr>
+                        <tr>
+                            <td >Physical Ed.</td>
+                            <td>
+                                <input type="number" class="Ed note">
+                            </td>
+                            <td>
+                                <input type="number" class="Ed note">
+                            </td>
+                            <td>
+                                <input type="number" class="Ed note">
+                            </td>
+                            <td>
+                                <input type="number" class="Ed note">
+                            </td>
+                            <td class="Ed Average">
+                                0.0
+                            </td>
+                            <td class="Ed result"></td>
+
+                        </tr>
+                        <tr>
+                            <td>Physical</td>
+                            <td>
+                                <input type="number" class="Physical note">
+                            </td>
+                            <td>
+                                <input type="number" class="Physical note">
+                            </td>
+                            <td>
+                                <input type="number" class="Physical note">
+                            </td>
+                            <td>
+                                <input type="number" class="Physical note">
+                            </td>
+                            <td class="Physical Average">
+                                0.0
+                            </td>
+                            <td class="Physical result"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="Arts">Arts</td>
+                            <td>
+                                <input type="number" class="Arts note">
+                            </td>
+                            <td>
+                                <input type="number" class="Arts note">
+                            </td>
+                            <td>
+                                <input type="number" class="Arts note">
+                            </td>
+                            <td>
+                                <input type="number" class="Arts note">
+                            </td>
+                            <td class="Arts Average">0.0</td>
+                            <td class="Arts result"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="chemical">Chemical</td>
+                            <td>
+                                <input type="number" class="chemical note">
+                            </td>
+                            <td>
+                                <input type="number" class="chemical note">
+                            </td>
+                            <td>
+                                <input type="number" class="chemical note">
+                            </td>
+                            <td>
+                                <input type="number" class="chemical note">
+                            </td>
+                            <td class="chemical Average">0.0</td>
+                            <td class="chemical result"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="occurrenceBtn_2">
+                    <button id="attGrade" class="TeacherSubmit Submit">Submit</button>
+                </div>
+                <small class="advice-Error"></small>
+            </div>
+        </section>
+
+        <section class="teacherAbsences">
+            <div class="backgroundSearchTeacher">
+                <div class="teacherParagraphTeacher">
+                    <img class="backArrowTeacher" src="../assets/images/seta.png">
+                    <h1 class="teacherTitleGrade">
+                        Teacher Portal
+                    </h1>
+                    <h3 class="subTitleGrade">   
+                        Enter the student's email
+                    </h3>
+                </div>
+                <div class="input-container">
+                    <input style="color: var(--font-Color)" type="text" class="username" required />
+                    <label class="enterEmail" for="Email">E-mail</label>
+                    <small style='color: red' class="advice-ErrorTeacher"></small>
+                </div>
+                <button id="submitAbsences" class="Submit">Submit</button>
+            </div>
+            <div class="progress"></div>
+                <div class="backgroundVerify">
+                    <h1 class="teacherTitleGrade"> 
+                        Is this your desired student?
+                    </h1>
+                    <div class="infoStudents">
+                        <p class="nameStudent">Name:</p>
+                        <p class="emailStudent">E-mail:</p>
+                        <p class="yearStudent">Year:</p>
+                        <p class="registerStudent">RA:</p>
+                    </div>
+                    <button class="Correct">Yes</button>
+                    <button class="Correct No">No</button>
+                </div>
+        </section>
+        <section class="teacherAbsences">
+            <div class="backgroundAbsences_2">
+                <div class="paragraphGrades">
+                    <img class="backArrowTeacherGrade backArrowTeacherAbsences" src="../assets/images/seta.png">
+                    <h1 class="teacherTitleGrade">
+                        Desired student Absences
+                    </h1> 
+                </div>
+                <table class="absencesDeveloped">
+                    <thead>
+                        <tr>
+                            <th>Grades</th>
+                            <th>1° Bimonthly</th>
+                            <th>2° Bimonthly</th>
+                            <th>3° Bimonthly</th>
+                            <th>4° Bimonthly</th>
+                            <th>Total</th>
+                            <th>Situation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Math</td>
+                            <td>
+                                <input type="number" class="Abs_Math absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Math absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Math absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Math absences">
+                            </td>
+                            <td  class="Abs_Math Total">
+                                0.0
+                            </td>
+                            <td class="Abs_Math abs_result"></td>
+                        </tr>
+                        <tr>
+                            <td>English</td>
+                            <td>
+                                <input type="number" class="Abs_Eng absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Eng absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Eng absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Eng absences">
+                            </td>
+                            <td class="Abs_Eng Total">
+                                0.0
+                            </td>
+                            <td class="Abs_Eng abs_result"></td>
+
+                        </tr>
+                        <tr>
+                            <td>Geography</td>
+                            <td>
+                                <input type="number" class="Abs_Geo absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Geo absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Geo absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Geo absences">
+                            </td>
+                            <td class="Abs_Geo Total">
+                            0.0
+                            </td>
+                            <td class="Abs_Geo abs_result"></td>
+                        </tr>
+                        <tr>
+                            <td >History</td>
+                            <td>
+                                <input type="number" class="Abs_His absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_His absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_His absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_His absences">
+                    
+                            </td>
+                            <td class="Abs_His Total">
+                                0.0
+                            </td>
+                            <td class="Abs_His abs_result"></td>
+
+                        </tr>
+                        <tr>
+                            <td >Physical Ed.</td>
+                            <td>
+                                <input type="number" class="Abs_Ed absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Ed absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Ed absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Ed absences">
+                            </td>
+                            <td class="Abs_Ed Total">
+                                0.0
+                            </td>
+                            <td class="Abs_Ed abs_result"></td>
+
+                        </tr>
+                        <tr>
+                            <td>Physical</td>
+                            <td>
+                                <input type="number" class="Abs_Physical absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Physical absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Physical absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Physical absences">
+                            </td>
+                            <td class="Abs_Physical Total">0.0</td>
+                            <td class="Abs_Physical abs_result"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="Arts">Arts</td>
+                            <td>
+                                <input type="number" class="Abs_Arts absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Arts absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Arts absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_Arts absences">
+                            </td>
+                            <td class="Abs_Arts Total">0.0</td>
+                            <td class="Abs_Arts abs_result"></td>
+
+                        </tr>
+                        <tr>
+                            <td class="chemical">Chemical</td>
+                            <td>
+                                <input type="number"class="Abs_chemical absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_chemical absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_chemical absences">
+                            </td>
+                            <td>
+                                <input type="number" class="Abs_chemical absences">
+                            </td>
+                            <td class="Abs_chemical Total">0.0</td>
+                            <td class="Abs_chemical abs_result"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <small class="advice-Error"></small>
+                <div class="occurrenceBtn_2">
+                    <button id="attAbsences" class="TeacherSubmit Submit">Submit</button>
+
+                </div>
+            </div>
+        </section>
+        <section class="teacherOccurrences">
+            <div class="backgroundOccurrences_2">
+                <div class="paragraphGrade">
+                    <img class="backArrow backArrowTeacherOcc" src="../assets/images/seta.png">
+                    <h1 class="titleGrades">
+                        Create or remove student warning
+                    </h1> 
+                    <div class="occurrenceBtn">
+                        <button class="addOccurrence">Add</button>
+                        <button class="remOccurrence">Remove All</button>
+                    </div>
+                </div>
+                <table class="OccurrencesDeveloped">
+                    <thead>
+                        <tr >
+                            <th>Title</th>
+                            <th class="minOcurrences">Student</th>
+                            <th class="minOcurrences">Status</th>
+                            <th class="minOcurrences">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="OccurrencesDeveloped_2">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="teacherOccurrences">
+            <div class="backgroundSearchTeacher">
+                <div class="teacherParagraphTeacher">
+                    <img class="backArrowTeacher" src="../assets/images/seta.png">
+                    <h1 class="teacherTitleGrade">
+                        Teacher Portal
+                    </h1>
+                    <h3 class="subTitleGrade">   
+                        Enter the student's email
+                    </h3>
+                </div>
+                <div class="input-container">
+                    <input style="color: var(--font-Color)" type="text" class="username" required />
+                    <label class="enterEmail" for="Email">E-mail</label>
+                    <small style='color: red' class="advice-ErrorTeacher"></small>
+                </div>
+                <button id="submitOccurrences" class="Submit">Submit</button>
+            </div>
+            <div class="progress"></div>
+                <div class="backgroundVerify">
+                    <h1 class="teacherTitleGrade"> 
+                        Is this your desired student?
+                    </h1>
+                    <div class="infoStudents">
+                        <p class="nameStudent">Name:</p>
+                        <p class="emailStudent">E-mail:</p>
+                        <p class="yearStudent">Year:</p>
+                        <p class="registerStudent">RA:</p>
+                    </div>
+                    <button class="Correct">Yes</button>
+                    <button class="Correct No">No</button>
+                </div>
+        </section>
+        <section class="teacherOccurrences">
+            <div id="progressUnity"class="progressAdd"></div>
+            <div class="descriptionOccurrencesTeacher">
+                <img class="backArrowTeacher backArrowTeacherOcc_2" src="../assets/images/seta.png">
+
+                <h1 style="margin-top: 30px"class="titleGrades">
+                    Description of the occurrence
+                </h1> 
+                <div style="display: none;" class="select-containerEdit">
+                    <select class="selectEdit" name="select">
+                        <option value="Status">Status</option>
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Heavy">Heavy</option>
+                    </select>
+                </div>
+                <div style="display: none;" class="input-titleEdit">
+                    <input style=" text-align: center;color: var(--font-Color)"type="text" class="titleOccurrencesEdit" required />
+                    <label class="titleOccEdit" for="Email">Title</label>
+                </div>
+                <br>
+                <div class="input-edit">
+                    <textarea style="padding: 20px; height: 200px;" class="edit" required></textarea>
+                    <label class="textEdit" for="Text">Text</label>
+                    <small class="advice-ErrorTeacher"></small>
+                    <div class="occurrenceBtn_2">
+                        <button style= "margin-top: 40px; margin-bottom: 40px;"class="compOccurrence">Completed</button>
+                    </div>
+                </div>
+                <br>
+                <p class="statusOccurrences"></p>
+                <p class="titOccurrences"></p>
+                <p class="paragraphOccurrences"></p>
+                <div class="occurrenceBtn_2">
+                    <button class="editOccurrence">Edit</button>
+                    <button class="deleteOccurrence">Delete</button>
+                </div>        
+                <small style="color: red" class="advice-ErrorOccurrence"></small>
+                <br>
+            </div>
+        </section> 
+        <div class="teacherOccurrences">
+            <div class="youSure">
+                <h1 class="titleGrades">
+                    Are you sure?
+                </h1> 
+                <p class="paragraphSuccess">Are you sure? Your changes will not be saved.</p>
+                <div class="occurrenceBtn_2">
+                    <button id="YesOccurrence" class="editOccurrence">Yes</button>
+                    <button id="NoOccurrence" class="deleteOccurrence">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="teacherOccurrences">
+            <div class="progressAdd"></div>
+            <div class="youSure">
+                <h1 class="titleGrades">
+                    Are you sure?
+                </h1> 
+                <p class="paragraphSuccess">Are you sure? The data will be deleted forever.</p>
+                <div class="occurrenceBtn_2">
+                    <button id="YesOccurrenceDel" class="editOccurrence">Yes</button>
+                    <button id="NoOccurrenceDel" class="deleteOccurrence">No</button>
+                </div>
+            </div>
+        </div>
+        <section class="teacherOccurrences">
+            <div class="progressAdd"></div>
+            <div class="addOccurrencesTeacher">
+                <img class="backArrowTeacher backArrowTeacherOcc_2" src="../assets/images/seta.png">
+                <h1 style="margin-top: 30px"class="titleGrades">Add Occurrence</h1>
+                <div class="select-container">
+                    <select class="select" name="select">
+                        <option value="Status">Status</option>
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Heavy">Heavy</option>
+                    </select>
+                </div>
+                <div class="input-title">
+                    <input style=" text-align: center;color: var(--font-Color)"type="text" class="titleOccurrences" required />
+                    <label class="titleOcc" for="Email">Title</label>
+                </div>
+                <br>
+                <div class="input-add">
+                    <textarea style="padding: 20px; height: 200px;" class="add" required></textarea>
+                    <label class="textAdd" for="Text">Text</label>
+                    <small style="color: red" class="advice-ErrorOccurrence"></small>
+                    <div class="occurrenceBtn_2">
+                        <button style= "margin-top: 40px; margin-bottom: 40px;"class="compOccurrence">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+
+
+
+        <section class="teacherActivities">
+            <div class="backgroundActivities">
+                <div class="paragraphGrade">
+                    <img class="backArrow backArrowTeacherAct" src="../assets/images/seta.png">
+                    <h1 class="titleGrades">
+                        Create or remove student Activities
+                    </h1> 
+                </div>
+                <div class="occurrenceBtn">
+                    <button id="addActivities" class="addOccurrence">Add</button>
+                    <button id="remAllActivities"class="remOccurrence">Remove All</button>
+                </div>
+                <table class="ActivitiesDeveloped">
+                    <thead>
+                        <tr >
+                            <th>Activities</th>
+                            <th class="minOcurrences" >Student</th>
+                            <th class="minOcurrences" >Date</th>
+                            <th class="minOcurrences">DateFinal</th>
+                        </tr>
+
+                    </thead>
+                </table>
+            </div>
+        </section>
+        <section class="teacherActivities">
+            <div class="backgroundSearchTeacher">
+                <div class="teacherParagraphTeacher">
+                    <img class="backArrowTeacher" src="../assets/images/seta.png">
+                    <h1 class="teacherTitleGrade">
+                        Teacher Portal
+                    </h1>
+                    <h3 class="subTitleGrade">   
+                        Enter the student's email
+                    </h3>
+                </div>
+                <div class="input-container">
+                    <input style="color: var(--font-Color)" type="text" class="username" required />
+                    <label class="enterEmail" for="Email">E-mail</label>
+                    <small style='color: red' class="advice-ErrorTeacher"></small>
+                </div>
+                <button id="submitActivities" class="Submit">Submit</button>
+            </div>
+            <div class="progress"></div>
+                <div class="backgroundVerify">
+                    <h1 class="teacherTitleGrade"> 
+                        Is this your desired student?
+                    </h1>
+                    <div class="infoStudents">
+                        <p class="nameStudent">Name:</p>
+                        <p class="emailStudent">E-mail:</p>
+                        <p class="yearStudent">Year:</p>
+                        <p class="registerStudent">RA:</p>
+                    </div>
+                    <button class="Correct">Yes</button>
+                    <button class="Correct No">No</button>
+                </div>
+        </section>
+        <section class="teacherActivities">
+            <div class="progressAdd"></div>
+            <div style='display: none'  class="descriptionOccurrencesTeacher">
+                <img class="backArrowTeacher" src="../assets/images/seta.png">
+                <h1 style="margin-top: 30px"class="titleGrades">
+                    Description of the task
+                </h1> 
+                <div style="display: none;" class="input-date">
+                    <div style="margin-top: 40px" class="input-date">
+                        <input type="date" min="" class="date" required>
+                    </div>
+                </div>
+                <div style="display: none;" class="input-titleEdit">
+                    <input style=" text-align: center;color: var(--font-Color)"type="text" class="titleOccurrencesEdit" required />
+                    <label class="titleOccEdit" for="Email">Title</label>
+                </div>
+                <br>
+                <div class="input-edit">
+                    <textarea style="padding: 20px; height: 200px;" class="edit" required></textarea>
+                    <label class="textEdit" for="Text">Text</label>
+                    <small class="advice-ErrorTeacher"></small>
+                    <div class="occurrenceBtn_2">
+                        <button style= "margin-top: 40px; margin-bottom: 40px;"class="compOccurrence">Completed</button>
+                    </div>
+                </div>
+                <small style="color: red" class="advice-ErrorAct"></small>
+                <br>
+                <p class="statusActivities"></p>
+                <p class="titActivities"></p><br>
+                <p class="paragraphActivities"> </p><br>
+                <div class="occurrenceBtn_2">
+                    <button id="editActivities" class="editOccurrence">Edit</button>
+                    <button id="deleteActivities" class="deleteOccurrence">Delete</button>
+                </div>        
+                <br>
+            </div>
+        </section> 
+        <section class="teacherActivities">
+            <div class="progressAdd"></div>
+            <div class="addActivitiesTeacher">
+                <img class="backArrowTeacher" src="../assets/images/seta.png">
+                <h1 style="margin-top: 30px" class="titleGrades">Add Activities</h1>
+                <div style="margin-top: 40px" class="input-date">
+                    <input type="date" min="2025" class="date" required>
+                </div>
+                <p style="margin-top: 10px;">Enter the delivery deadline</p>
+                <div class="input-title">
+                    <input style=" text-align: center;color: var(--font-Color)"type="text" class="titleActivities" required />
+                    <label class="titleOcc" for="Email">Title</label>
+                </div>
+                <br>
+                <div class="input-add">
+                    <textarea style="padding: 20px; height: 200px; color: var(--font-Color)" class="addAct" required></textarea>
+                    <label class="textAdd" for="Text">Text</label>
+                    <small style="color: red" class="advice-ErrorAct"></small>
+                    <div class="occurrenceBtn_2">
+                        <button id="compActivities"style= "margin-top: 40px; margin-bottom: 40px;"class="compOccurrence">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <div class="teacherActivities">
+            <div class="youSure">
+                <h1 class="titleGrades">
+                    Are you sure?
+                </h1> 
+                <p class="paragraphSuccess">Are you sure? Your changes will not be saved.</p>
+                <div class="occurrenceBtn_2">
+                    <button id="YesActivies" class="editOccurrence">Yes</button>
+                    <button id="NoActivies" class="deleteOccurrence">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="teacherActivities">
+            <div class="progressAdd"></div>
+            <div class="youSure">
+                <h1 class="titleGrades">
+                    Are you sure?
+                </h1> 
+                <p class="paragraphSuccess">Are you sure? The data will be deleted forever.</p>
+                <div class="occurrenceBtn_2">
+                    <button id="YesActivitiesDel" class="editOccurrence">Yes</button>
+                    <button id="NoActivitiesDel" class="deleteOccurrence">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="descriptionSuccess descriptionOccurrences descriptionActivities">
+            <h1 class="titleGrades">
+                SUCCESS!
+            </h1> 
+            <p class="paragraphSuccess">The system has been updated.</p>
+            <button id="BackNotes" class="TeacherSubmit Submit">OK!</button>
+        </div>
+
+        <div class="descriptionSuccess descriptionOccurrences descriptionActivities">
+            <h1 class="titleGradesError">
+                ERROR!
+            </h1> 
+            <p class="paragraphSuccess">There is no occurrence field in this account.</p>
+            <button id="BackNotesError" class="TeacherSubmit Submit">OK!</button>
+        </div>
+        <section>
+            <article class="usuallySigned">
+                <div class="background-Certification">
+                    <img class="imageVerify"src="../assets/images/welcome.svg">
+                    <h1 class="title"></h1>
+                    <p class="paragraph">
+                        If you don't have grades, contact the teacher. Any questions, contact support! Thank you, great use.
+                    </p><br>
+                    <input type='button' id="noShow"value="OK!" class="backMenu">
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <script src="../scripts/index_Teacher.js" type="module" ></script>
+    <script type="module" src="../scripts/index_StudentsAndTeacher.js"></script>
+    
+    <script src="../scripts/dataBase_Config.js"></script>
+
+
+</body>
+</html>

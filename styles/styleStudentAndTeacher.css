@@ -1,0 +1,814 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html, body {
+
+    height: 100%; 
+    overflow-x: hidden; 
+}
+
+@keyframes sunAnimation {
+    
+    from{left: 50%}
+    to{left: 3px;}
+
+}
+
+@keyframes moonAnimation {
+    
+    from{right: 50%;}
+    to{right: 10px;}
+
+}
+
+
+@keyframes pointerAnimation{
+
+    0%, 100%{opacity: 1;}
+    50%{opacity: 0;}
+
+}
+
+@keyframes paragraphShow {
+    
+    from{ margin-left: -90px; opacity: 0;}
+    to{margin-left: 0px; opacity: 1;}
+
+}
+
+@keyframes btnShow {
+    
+    from{display: none; margin-right: -90px; }
+    to{display: block;margin-right: 0px; }
+
+}
+
+@keyframes showBackground {
+    
+    from{opacity: 0;}
+    to{opacity: 1;}
+
+}
+
+
+body{
+
+    background-color: var(--light-Mode);
+    color: var(--font-Color)
+
+}
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: relative;
+    height: 90px;
+    background-color: var(--light-Mode-Header);
+
+}
+
+.darkMode{
+
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 27px;
+
+    background-color: var(--items-Color);
+
+    right: 0;
+    border-radius: 20px;
+
+
+}
+
+.Sun{
+
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(250, 187, 71);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+
+    border-radius: 15px;
+
+}
+
+.Moon{
+
+    display: none;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    
+    border-radius: 100%;
+
+    box-shadow: 6px 0px 0 0 white;
+
+}
+
+.studentsPortal{
+
+    font-size: calc(100% + 1vmin);
+
+}
+
+.studentImage{
+
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+
+.imageTs{
+    
+    width: 40px;
+    border-radius: 100%;
+
+
+}
+
+.usuallySigned{
+
+
+    display: flex !important; 
+}
+
+.background-Certification{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-Mode);
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 90px;
+    padding-top: 90px;
+}
+
+.imageVerify{
+
+    height: 200px;
+
+}
+
+.title{
+    
+    margin-top: 30px;
+    font-size: calc(100% + 1.2vmin);
+    letter-spacing: 5px;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    color: var(--font-Color);
+
+    background-image: linear-gradient(80deg, rgb(1, 39, 255), rgb(57, 138, 252), #2f49a8);
+}
+
+.paragraph{
+
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+
+    font-size: calc(100% + 0vmin);
+    animation-name: paragraphShow;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+
+}
+
+.title::after{
+
+    content: '|';
+    opacity: 1;
+    animation-name: pointerAnimation;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+
+    background-color: gray;
+
+    letter-spacing: -1px;
+
+}
+
+input[type="button"]{
+
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+
+    border: none;
+    margin-top: 30px;
+    height: 40px;
+
+    background: linear-gradient(80deg, rgb(83, 154, 247), #496ef7);
+
+    font-size: 20px;
+    color: white;
+    transition: all .4s ease;
+
+}
+
+#noShow{
+
+    animation-name: btnShow;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+
+
+}
+
+input[type="button"]:hover{
+
+    transform: scale(1.1);
+    letter-spacing: 2px;
+    background: linear-gradient(80deg, #496ef7, rgb(83, 154, 247));
+
+}
+
+.imageSource{
+
+    display: flex;
+    justify-content: center;    
+    margin-top: 90px;
+
+
+}
+
+.imageProperty{
+
+    position: relative;
+    width: 360px;
+
+}
+
+.studentIdentification{
+
+    background-color: var(--items-Color);
+    border-radius: 50%;    
+    width: 360px;
+
+}
+
+.configStudent{
+
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+.imageConfig{
+
+    cursor: pointer;
+    background-color: rgb(15, 78, 119);
+    border-radius: 100%;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.imageConfig:hover{
+
+    background-color: rgb(68, 113, 143);
+    transform: scale(1.05)
+
+}
+
+.welcomeUsually{
+
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.welcomeParagraph{
+
+    font-size: calc(100% + 2.8vmin);
+    margin-top: 13px;
+
+}
+
+.name{
+
+    color:rgb(48, 147, 212);
+
+}
+
+.buttons{
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.designButton {
+    position: relative;
+    width: 17vw; 
+    height: 17vw; 
+    max-width: 140px; 
+    max-height: 140px;
+    background-color: rgb(36, 125, 248);
+    margin-top: 5vh; 
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.buttonGrade:hover{
+
+    width: 145px;
+    height: 145px;
+    cursor: pointer;
+    background-color: rgb(14, 88, 192);
+
+
+
+}
+
+.imageBtn{
+
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.exclusive{
+
+    margin-right: 9px
+
+}
+
+
+.paragraphButtons{
+
+    margin-top: 10px;
+    font-size: calc(100% + 1vmin);
+    text-align: center;
+
+}
+
+.yourGrades, .teacherGrade, .teacherAbsences, .teacherOccurrences, .teacherActivities, .descriptionMain, .usuallySigned{
+
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(3, 3, 3, 0.61);
+    width: 100%; height: 100vh;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .2s ease;
+    animation-name: showBackground;
+    animation-duration: 0.8s;
+    animation-fill-mode: backwards;
+
+
+}
+
+.teacherActivities{
+
+    display: NONE;
+
+
+}
+
+.backgroundGrades, .backgroundOccurrences, .backgroundActivities, .backgroundGradeTeacher_2, .backgroundAbsences_2, .backgroundOccurrences_2{
+
+    background-color: var(--light-Mode);
+    width: 90%;
+    height: 80vh;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    overflow: auto;
+    
+}
+
+.backgroundOccurrences_2{
+
+    display: block;
+}
+
+.gradesDeveloped, .absencesDeveloped, .OccurrencesDeveloped, .ActivitiesDeveloped{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 20px 0;
+    
+}
+.gradesDeveloped  th, .gradesDeveloped td, .absencesDeveloped th, .absencesDeveloped td, .OccurrencesDeveloped th, .OccurrencesDeveloped td, .ActivitiesDeveloped td, .ActivitiesDeveloped th{
+    border: 1px solid rgb(68, 113, 143);
+    padding: 10px;
+}
+
+.gradesDeveloped  th, .absencesDeveloped th, .OccurrencesDeveloped th {
+    font-weight: bold;
+}
+
+
+.titleGrades, .teacherTitleGrade{
+
+    font-size: calc(100% + 1.2vmin);
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--font-Color);
+    background-image: linear-gradient(80deg, rgb(1, 39, 255), rgb(57, 138, 252), #2f49a8);
+
+}
+
+.titleGradesError{
+
+    font-size: calc(100% + 1.2vmin);
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--font-Color);
+    background-image: linear-gradient(80deg, rgb(243, 70, 70), #fc6363, #b80d0d);
+
+}
+
+.backArrow{
+
+    position: absolute;
+    left: 6%;
+    top: 11%;
+    transition: all .4s ease;
+}
+
+.backArrow:hover{
+
+    cursor: pointer;
+    filter: invert(55%);    
+    transform: translateX(10%);
+
+}
+.minOcurrences{
+
+    width: 5% !important; 
+
+}
+
+#Situation{
+
+    text-align: center;
+
+}
+
+.descriptionOccurrences,.descriptionOccurrencesTeacher, .youSure, .addOccurrencesTeacher, .addActivitiesTeacher{
+
+    display: none;
+    position: absolute;
+    background-color: var(--light-Mode);
+    width: 70%;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: all .2s ease;
+    animation-name: showBackground;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    
+
+}
+
+
+.descriptionOccurrencesTeacher, .addOccurrencesTeacher{
+
+    display: block;
+
+}
+
+.paragraphOccurrences{
+
+    text-align: center !important;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-indent: 30px
+}
+
+.defaultSettings{
+
+    transition: all .2s ease-in-out;
+}
+
+.defaultSettings:hover{
+
+    cursor: pointer;
+    background-color: rgba(87, 142, 245, 0.158);
+
+}
+
+.understandButton{
+
+    animation-delay: 0s !important;
+
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+
+    .gradesDeveloped, .absencesDeveloped, .OccurrencesDeveloped, .ActivitiesDeveloped {
+        width: 97%; 
+        margin: 10px auto; 
+        font-size: 12px; 
+    }
+
+    .gradesDeveloped th, .gradesDeveloped td, 
+    .absencesDeveloped th, .absencesDeveloped td, 
+    .OccurrencesDeveloped th, .OccurrencesDeveloped td, 
+    .ActivitiesDeveloped th, .ActivitiesDeveloped td {
+        padding: 8px; 
+        word-wrap: break-word; 
+    }
+
+    .backgroundGrades, .backgroundOccurrences, .backgroundActivities, 
+    .backgroundGradeTeacher_2, .backgroundAbsences_2, .backgroundOccurrences_2 {
+        width: 100%; 
+        height: auto; 
+        padding: 45px; 
+        border-radius: 5px;
+    }
+
+    .titleGrades, .teacherTitleGrade {
+        font-size: calc(100% + 1.2vmin); 
+        text-align: center;
+        padding: 10px 5px; 
+    }
+
+    .backArrow {
+
+        left: 4%;
+        top: 32%; 
+
+    }
+    .backHigh{
+
+        left: 2% !important; 
+        top: 25% !important; 
+
+    }
+
+    .backAct{
+
+        top: 36% !important;
+
+    }
+    .backArrowTeacherGrade{
+
+        position: absolute;
+        left: 2% !important;
+        top: 8% !important;
+
+        transition: all .4s ease;
+    
+    }
+
+    .backArrowTeacherAbsences{
+
+        left: 2% !important;
+        top: 12% !important;
+    }
+
+    .backArrowTeacherOcc{
+
+        left: 2% !important;
+        top: 27% !important;
+    }
+
+    .descriptionOccurrences, 
+    .descriptionOccurrencesTeacher, 
+    .youSure, 
+    .addOccurrencesTeacher, 
+    .addActivitiesTeacher {
+        width: 90%; /* Aumenta o preenchimento horizontal em telas menores */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .backArrowTeacherOcc_2 {
+        width: 35px;
+        height: 35px; 
+        left: 4% !important; 
+        top: 2%  !important; 
+    }
+
+}
+
+@media screen and (max-width: 541px){
+    .backArrowTeacherOcc_2 {
+        width: 25px;
+        height: 25px; 
+        left: 4% !important; 
+        top: 2%  !important; 
+    }
+
+    .backArrow {
+
+        width: 20px;
+        height: 20px;
+        left: 3%; 
+        top: 31%; 
+
+    }
+
+    .backHigh{
+
+        left: 2% !important; 
+        top: 23% !important; 
+
+    }
+    .backArrowTeacherGrade{
+
+        width: 27px;
+        height: 27px;
+    }
+
+    .backArrowTeacherAbsences{
+
+        left: 2% !important;
+        top: 12% !important;
+    }
+
+}
+
+
+@media screen and (max-width: 488px){
+    .descriptionOccurrences, 
+    .descriptionOccurrencesTeacher, 
+    .youSure, 
+    .addOccurrencesTeacher, 
+    .addActivitiesTeacher {
+        width: 95%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        
+    }
+    
+
+
+    .title{
+    
+        font-size: calc(100% + 1.2vmin);
+        letter-spacing: 0px;
+        
+    }
+    
+
+    .yourGrades, .teacherGrade, .teacherAbsences, .teacherOccurrences, .teacherActivities, .descriptionMain, .usuallySigned{
+
+        height: 100%;
+
+    }
+
+    .buttons{
+
+        flex-direction: column;
+
+    }
+
+    .designButton{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100px;
+        height: 100px;
+    
+    }
+
+    .imageProperty, .studentIdentification{
+
+        width: 70vw;
+
+    }
+
+    .imageConfig{
+
+        width: 85%;
+
+    }
+
+    .configStudent{
+
+        width: 23%;
+        bottom: 10%;
+        right: 0;
+
+    }
+
+    .paragraph{
+
+        text-align: center;
+        width: 90%;
+
+    }
+
+    input[type="button"]{
+
+        width: 70%;
+
+    }
+
+    header{
+
+        height: 150px;
+    
+    }
+
+    .backArrowTeacherAbsences{
+
+        left: 2% !important;
+        top: 10% !important;
+    }
+
+    .backArrowTeacherOcc{
+
+        left: 2% !important;
+        top: 25% !important;
+    }
+
+}
+
+
+@media screen and (max-width: 290px){
+
+    .title{
+    
+        font-size: calc(90% + 0.7vmin);
+        letter-spacing: 0px;
+        
+    }
+
+    .paragraph{
+
+        font-size: calc(70% + 0.7vmin);
+
+
+    }
+    .configStudent{
+
+        width: 30%;
+
+
+    }
+
+    .designButton{
+
+        width: 100px;
+        height: 100px;
+    
+    }
+}
+
+@media screen and (max-width: 332px){
+
+}
