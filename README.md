@@ -10,8 +10,8 @@ O sistema conta com as seguintes funcionalidades:
 - **Login de Professores e Estudantes:**  
   Professores são registrados exclusivamente pelo sistema, enquanto estudantes podem criar suas contas a qualquer momento.  
   **Logins de exemplo para professores:**
-  - `vandamaria@unicamp.br`
-  - `josepedro@unicamp.br`  
+  - `vandamaria@unicamp.br Senha: 123456`
+  - `josepedro@unicamp.br Senha: 123456`  
   *(Para criar novos logins de professor, consulte os comentários no código com orientações específicas.)*
 
 - **Recursos para Professores:**  
@@ -35,8 +35,8 @@ The system offers the following features:
 - **Teacher and Student Login:**  
   Teachers are registered exclusively by the system, while students can create their accounts at any time.  
   **Example logins for teachers:**
-  - `vandamaria@unicamp.br`
-  - `josepedro@unicamp.br`  
+  - `vandamaria@unicamp.br Password: 123456`
+  - `josepedro@unicamp.br Password: 123456`  
   *(To create new teacher logins, check the comments in the code for specific instructions.)*
 
 - **Teacher Tools:**  
