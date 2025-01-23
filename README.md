@@ -76,4 +76,4 @@ This site uses **Firebase** as its database. The data collected is used exclusiv
 ---
 
 # 🚀 Demonstração Online | Online Demo <br>
-[https://Simulated_School_System](https://lessons-ebc69.web.app)
+[https://www.Simulated_School_System.com](https://lessons-ebc69.web.app)
