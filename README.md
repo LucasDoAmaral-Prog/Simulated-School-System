@@ -2,7 +2,6 @@
 
 ## 📖 Sobre o Projeto | About the Project
 
-
  ### **Português** :brazil:
 Este site foi desenvolvido com o objetivo de **treinar habilidades com banco de dados** e simular um ambiente escolar, permitindo que professores e estudantes interajam de forma eficiente.  
 O sistema conta com as seguintes funcionalidades:
