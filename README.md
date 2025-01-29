@@ -46,9 +46,9 @@ The system offers the following features:
 
 - **Student Interface:**  
   Students can:
-  - View their **grades**
-  - Check **pending tasks**
-  - Review their **incidents** and absences
+  - View their **grades**.
+  - Check **pending tasks**.
+  - Review their **incidents** and absences.
 
 ---
 
